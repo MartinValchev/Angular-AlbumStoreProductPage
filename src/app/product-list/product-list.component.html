@@ -1,7 +1,5 @@
 <ul>
   <li *ngFor="let product of products">
-    <div class="col-sm-8 text-right">
-      <span>{{product.albumName}}</span>
-    </div>
+    <a [routerLink]="['/product/{{product.id}}']" [queryParams]="{id: '{{product.id}}'}">{{product.albumName}}</a>
   </li>
 </ul>
